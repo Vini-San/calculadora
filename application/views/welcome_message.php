@@ -55,7 +55,7 @@
                     <input class="form-group btn btn-danger bttn" type="button" name="bttndiv" value="/"><br/>
 
                     
-                    <input class="form-group btn btn-info bttn bttne" type="button" value="CE">
+                    <input class="form-group btn btn-info bttn bttne" type="reset" value="CE" name="clean" id="clean">
 
                     <input class="form-group btn btn-success bttn bttne" type="submit" name="calculate" value="=">
 
@@ -70,6 +70,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+	$('#clean').on('click',function(){
+		
+		location.replace("<?php echo base_url()?>");
+
+    	})
 	$('input[type=button]').on('click',function(){
 		if($('#btnValue').val()==''){
 	$('#btnValue').val($(this).val());
